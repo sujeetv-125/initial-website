@@ -99,22 +99,24 @@
 
     <main>
         <header id="hero" role="banner">
-            <div class="hero-glass reveal">
+            <div class="hero-container reveal">
                 <div class="hero-content">
                     <span class="badge" aria-label="Availability Status">🚀 Currently Open to Work</span>
                     <h1>I'm <span class="highlight">Sujeet Kumar</span></h1>
                     <div class="typing-container">
                         <span id="typing-text"></span><span class="cursor"></span>
                     </div>
-                    <p class="tagline">Eager to contribute to scalable infrastructure and robust full-stack applications with a focus on containerization and automation.
-
-                        
-                    </p>
+                    <p class="tagline">Eager to contribute to scalable infrastructure and robust full-stack applications with a focus on containerization and automation.</p>
                     <div class="cta-buttons">
                         <a href="#projects" class="btn btn-primary">View My Work</a>
                         <a href="resume.pdf" class="btn btn-secondary" download="Sujeet_Kumar_Resume.pdf">
                             <i data-lucide="download" style="width: 18px; vertical-align: middle; margin-right: 5px;"></i> Download Resume
                         </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-img-wrapper">
+                        <img src="meraphoto.jpg" alt="Sujeet Kumar" class="prof-photo">
                     </div>
                 </div>
             </div>
@@ -139,12 +141,12 @@
                         </div>
                         <div class="stats">
                             <div class="stat-item">
-                                <span class="stat-num">10+</span>
-                                <span class="stat-label">Projects</span>
+                                <span class="stat-num">12+</span>
+                                <span class="stat-label">GitHub Repositories</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-num">5+</span>
-                                <span class="stat-label">Tech Stack</span>
+                                <span class="stat-num">8+</span>
+                                <span class="stat-label">Core Technologies</span>
                             </div>
                         </div>
                     </div>
@@ -159,22 +161,24 @@
                     <div class="skill-card reveal">
                         <div class="skill-icon"><i data-lucide="code-2" aria-hidden="true"></i></div>
                         <h3>Backend</h3>
-                        <p>Python, Django, PostgreSQL, Redis</p>
+                        <p><strong>Advanced:</strong> Python, Django</p>
+                        <p><strong>Intermediate:</strong> PostgreSQL, Redis, REST APIs</p>
                     </div>
                     <div class="skill-card reveal">
                         <div class="skill-icon"><i data-lucide="box" aria-hidden="true"></i></div>
                         <h3>DevOps</h3>
-                        <p>Docker, Docker Compose, Nginx</p>
+                        <p><strong>Advanced:</strong> Docker, Docker Compose</p>
+                        <p><strong>Intermediate:</strong> Nginx, CI/CD Pipelines</p>
                     </div>
                     <div class="skill-card reveal">
                         <div class="skill-icon"><i data-lucide="cloud" aria-hidden="true"></i></div>
                         <h3>IaC</h3>
-                        <p>Terraform, Infrastructure Automation</p>
+                        <p><strong>Intermediate:</strong> Terraform, AWS, Infrastructure Automation</p>
                     </div>
                     <div class="skill-card reveal">
                         <div class="skill-icon"><i data-lucide="braces" aria-hidden="true"></i></div>
                         <h3>Frontend</h3>
-                        <p>JavaScript, HTML5, CSS3</p>
+                        <p><strong>Intermediate:</strong> JavaScript (ES6+), HTML5, CSS3</p>
                     </div>
                 </div>
             </div>
@@ -188,17 +192,20 @@
                     <div class="project-card-container reveal">
                         <div class="project-card">
                             <div class="card-front">
-                                <div class="project-img"><i data-lucide="layers" aria-hidden="true"></i></div>
+                                <div class="project-img">
+                                    <img src="https://images.unsplash.com/photo-1605745341112-85968b193ef5?auto=format&fit=crop&q=80&w=800" alt="Django Docker Stack" class="project-photo">
+                                </div>
                                 <div class="project-content">
                                     <h3>Django Docker Stack</h3>
-                                    <p>Containerized production-ready Django environment with Nginx and Redis.</p>
+                                    <p>Solved the "it works on my machine" problem by architecting a standardized, containerized production environment. I configured a multi-container stack using Docker Compose, integrating Nginx.</p>
                                     <div class="tech-stack">
                                         <span>Docker</span><span>Django</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <h3>Tech Stack</h3>
+                                <h3>Outcome</h3>
+                                <p>Successfully streamlined local development for teams, resulting in zero environment-related bugs during the hand-off phase.</p>
                                 <div class="tech-stack" style="justify-content: center; margin: 1.5rem 0;">
                                     <span>Django</span><span>Docker</span><span>Nginx</span><span>PostgreSQL</span><span>Redis</span>
                                 </div>
@@ -214,14 +221,15 @@
                                 <div class="project-img"><i data-lucide="cpu" aria-hidden="true"></i></div>
                                 <div class="project-content">
                                     <h3>Terraform IaC</h3>
-                                    <p>Automated infrastructure deployment for Python applications using Terraform.</p>
+                                    <p>Addressed the challenge of manual infrastructure provisioning by implementing Infrastructure as Code for Python-based cloud applications.                                                                                   </p>
                                     <div class="tech-stack">
                                         <span>Terraform</span><span>Python</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <h3>Tech Stack</h3>
+                                <h3>Outcome</h3>
+                                <p>Reduced infrastructure setup time from hours to minutes, enabling rapid scaling and consistent environment duplication.</p>
                                 <div class="tech-stack" style="justify-content: center; margin: 1.5rem 0;">
                                     <span>Terraform</span><span>HCL</span><span>Python</span><span>AWS</span><span>GitHub Actions</span>
                                 </div>
@@ -237,14 +245,15 @@
                                 <div class="project-img"><i data-lucide="flame" aria-hidden="true"></i></div>
                                 <div class="project-content">
                                     <h3>JS Mastery</h3>
-                                    <p>Exploration of advanced JavaScript patterns and modern web APIs.</p>
+                                    <p>Developed a comprehensive repository to tackle complex asynchronous patterns and DOM manipulation logic in modern web development. I implemented custom state management solutions and optimized performance using advanced ES6+ features. This project served as a technical foundation for building highly interactive and reactive user interfaces.</p>
                                     <div class="tech-stack">
                                         <span>JavaScript</span><span>ES6+</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <h3>Tech Stack</h3>
+                                <h3>Outcome</h3>
+                                <p>Established a reusable library of patterns that reduced UI component development time in subsequent full-stack projects.</p>
                                 <div class="tech-stack" style="justify-content: center; margin: 1.5rem 0;">
                                     <span>JavaScript</span><span>ES6+</span><span>Web APIs</span><span>Async/Await</span><span>DOM</span>
                                 </div>
@@ -282,10 +291,14 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Sujeet Kumar. All rights reserved.</p>
+            <p>&copy; 2026 Sujeet Kumar. All rights reserved.</p>
             <p class="footer-note">Designed & Built with ❤️ by Sujeet</p>
         </div>
     </footer>
+
+    <button id="back-to-top" aria-label="Back to Top">
+        <i data-lucide="arrow-up"></i>
+    </button>
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="script.js"></script>

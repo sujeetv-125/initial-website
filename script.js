@@ -99,11 +99,33 @@ const revealObserver = new IntersectionObserver((entries) => {
             entry.target.classList.add('active');
         }
     });
-}, { threshold: 0.1 });
+}, { threshold: 0.15 });
 
 revealElements.forEach(el => revealObserver.observe(el));
 
-// Navbar Scroll Effect
+// Active Nav Link on Scroll
+const sections = document.querySelectorAll('section, header');
+const navItems = document.querySelectorAll('.nav-links a');
+
+const activeNavObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${id}`) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    });
+}, { threshold: 0.5 });
+
+sections.forEach(section => activeNavObserver.observe(section));
+
+// Navbar Scroll Effect & Back to Top
+const backToTop = document.getElementById('back-to-top');
+
 window.addEventListener('scroll', () => {
     const nav = document.getElementById('navbar');
     if (window.scrollY > 50) {
@@ -111,6 +133,19 @@ window.addEventListener('scroll', () => {
     } else {
         nav.classList.remove('scrolled');
     }
+
+    if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+    } else {
+        backToTop.classList.remove('visible');
+    }
+});
+
+backToTop.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 });
 
 // Smooth Scroll for Navigation
