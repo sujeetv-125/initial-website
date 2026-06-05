@@ -72,13 +72,11 @@ const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 
 hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    const isActive = navLinks.classList.toggle('active');
+    document.body.style.overflow = isActive ? 'hidden' : '';
+    
     const icon = hamburger.querySelector('i');
-    if (navLinks.classList.contains('active')) {
-        icon.setAttribute('data-lucide', 'x');
-    } else {
-        icon.setAttribute('data-lucide', 'menu');
-    }
+    icon.setAttribute('data-lucide', isActive ? 'x' : 'menu');
     lucide.createIcons();
 });
 
@@ -86,6 +84,7 @@ hamburger.addEventListener('click', () => {
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
+        document.body.style.overflow = '';
         hamburger.querySelector('i').setAttribute('data-lucide', 'menu');
         lucide.createIcons();
     });
