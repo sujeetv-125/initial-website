@@ -33,12 +33,12 @@
         :root {
             --bg-color: #ffffff;
             --text-color: #1a1a1a;
-            --primary-color: #3182ce;
-            --glass-bg: rgba(255, 255, 255, 0.1);
+            --primary-color: #4f46e5;
         }
         body.dark-mode {
             --bg-color: #0f172a;
-            --text-color: #f1f5f9;
+            --text-color: #f8fafc;
+            --primary-color: #818cf8;
         }
         body {
             margin: 0;
@@ -52,22 +52,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-        }
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
         }
         .hero-glass {
-            background: var(--glass-bg);
-            backdrop-filter: blur(16px);
             padding: 3rem;
-            border-radius: 24px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
         }
     </style>
 
@@ -118,7 +106,10 @@
                     <div class="typing-container">
                         <span id="typing-text"></span><span class="cursor"></span>
                     </div>
-                    <p class="tagline">Eager to contribute to scalable infrastructure and robust full-stack applications with a focus on containerization and automation.</p>
+                    <p class="tagline">Eager to contribute to scalable infrastructure and robust full-stack applications with a focus on containerization and automation.
+
+                        
+                    </p>
                     <div class="cta-buttons">
                         <a href="#projects" class="btn btn-primary">View My Work</a>
                         <a href="resume.pdf" class="btn btn-secondary" download="Sujeet_Kumar_Resume.pdf">
@@ -141,8 +132,11 @@
                         </div>
                     </div>
                     <div class="about-text reveal">
-                        <p>I am a developer driven by the desire to build efficient and scalable systems{edit is here}. My expertise bridges the gap between software development and system operations, focusing on tools like **Docker**, **Terraform**, and **Django**.</p>
+                        <p>I am a developer driven by the desire to build efficient and scalable systems. My expertise bridges the gap between software development and system operations, focusing on tools like **Docker**, **Terraform**, and **Django**.</p>
                         <p>I actively contribute to the open-source community, as seen in my GitHub achievements. My goal is to create seamless deployment pipelines and highly available applications.</p>
+                        <div class="cta-buttons" style="justify-content: flex-start; margin-top: 2rem;">
+                            <a href="resume.pdf" class="btn btn-secondary" target="_blank">View Full Resume</a>
+                        </div>
                         <div class="stats">
                             <div class="stat-item">
                                 <span class="stat-num">10+</span>
@@ -268,7 +262,10 @@
                 <div class="contact-wrapper reveal">
                     <p>I am currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
                     <div class="contact-buttons">
-                        <a href="mailto:your-email@example.com" class="contact-btn">
+                        <a href="resume.pdf" class="contact-btn" download="Sujeet_Kumar_Resume.pdf">
+                            <i data-lucide="file-text"></i> Resume
+                        </a>
+                        <a href="mailto:sujeetv559@gmail.com" class="contact-btn">
                             <i data-lucide="mail"></i> Email Me
                         </a>
                         <a href="https://www.linkedin.com/in/sujeet-kumar-6655142b4/" class="contact-btn" target="_blank" rel="noopener noreferrer">

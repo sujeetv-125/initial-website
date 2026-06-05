@@ -13,7 +13,10 @@ const setTheme = (theme) => {
         body.classList.remove('dark-mode');
         themeIcon.setAttribute('data-lucide', 'sun');
     }
-    if (window.lucide) lucide.createIcons();
+    // Small delay to ensure DOM is updated before Lucide processes it
+    setTimeout(() => {
+        if (window.lucide) lucide.createIcons();
+    }, 10);
 };
 
 themeToggle.addEventListener('click', () => {
